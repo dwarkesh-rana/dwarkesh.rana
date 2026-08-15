@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250" width="100%" height="100%" fill="none">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@700;800&amp;display=swap');
+      .nova-txt { font-family: 'JetBrains Mono', monospace; font-weight: 700; font-size: 11px; fill: #64748b; }
+      .companion-state { font-family: 'JetBrains Mono', monospace; font-weight: 800; font-size: 11px; fill: #00f7ff; }
+      
+      @keyframes floatCat {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-5px); }
+      }
+      .cat-body {
+        animation: floatCat 3s ease-in-out infinite;
+      }
+    </style>
+  </defs>
+
+  <!-- Border Frame -->
+  <rect width="400" height="250" rx="12" fill="#090515" stroke="#1f183c" stroke-width="1.5"/>
+
+  <!-- Radar Matrix Coordinates -->
+  <line x1="200" y1="20" x2="200" y2="210" stroke="#1c113b" stroke-width="1" stroke-dasharray="4,4"/>
+  <line x1="40" y1="115" x2="360" y2="115" stroke="#1c113b" stroke-width="1" stroke-dasharray="4,4"/>
+  <circle cx="200" cy="115" r="70" stroke="#1c113b" stroke-width="0.5" stroke-dasharray="2,2"/>
+
+  <!-- Telemetry Overlay Info Box -->
+  <rect x="25" y="25" width="110" height="42" rx="4" fill="#0d081f" stroke="#251242" stroke-width="1"/>
+  <text x="35" y="40" class="nova-txt" font-size="9">companion.exe</text>
+  <text x="35" y="55" class="companion-state" font-size="9">STATE: WALKING</text>
+
+  <!-- Telemetry Config Box 2 -->
+  <rect x="275" y="25" width="100" height="42" rx="4" fill="#0d081f" stroke="#251242" stroke-width="1"/>
+  <text x="285" y="40" class="nova-txt" font-size="9">FPS: 60.00</text>
+  <text x="285" y="55" class="nova-txt" font-size="9" fill="#a855f7">ENGINE: TAURI</text>
+
+  <!-- Cute Vector Gradient Cat Companion (Cat silhouette/art) -->
+  <g class="cat-body" transform="translate(160, 65)">
+    <!-- Cat Ears -->
+    <polygon points="12,40 28,15 36,40" fill="#a855f7"/>
+    <polygon points="52,40 60,15 76,40" fill="#a855f7"/>
+    <polygon points="17,40 28,21 34,40" fill="#00f7ff" opacity="0.8"/>
+    <polygon points="54,40 60,21 71,40" fill="#00f7ff" opacity="0.8"/>
+    
+    <!-- Cat Head -->
+    <ellipse cx="44" cy="50" rx="30" ry="22" fill="#a855f7"/>
+    
+    <!-- Glowing Cyan Eyes -->
+    <ellipse cx="32" cy="48" rx="4" ry="6" fill="#00f7ff"/>
+    <ellipse cx="56" cy="48" rx="4" ry="6" fill="#00f7ff"/>
+    <circle cx="31" cy="46" r="1.5" fill="#ffffff"/>
+    <circle cx="55" cy="46" r="1.5" fill="#ffffff"/>
+
+    <!-- Snout & Mouth -->
+    <path d="M 42,56 Q 44,59 46,56 Q 44,55 42,56 Z" fill="#090515"/>
+    <path d="M 40,62 Q 44,65 44,62 Q 44,65 48,62" stroke="#00f7ff" stroke-width="1" fill="none"/>
+
+    <!-- Cat Whisker Vectors -->
+    <line x1="8" y1="52" x2="-8" y2="50" stroke="#00f7ff" stroke-width="1" opacity="0.7"/>
+    <line x1="8" y1="58" x2="-10" y2="60" stroke="#00f7ff" stroke-width="1" opacity="0.7"/>
+    <line x1="80" y1="52" x2="96" y2="50" stroke="#00f7ff" stroke-width="1" opacity="0.7"/>
+    <line x1="80" y1="58" x2="98" y2="60" stroke="#00f7ff" stroke-width="1" opacity="0.7"/>
+
+    <!-- Cat Body -->
+    <path d="M 24,70 Q -4,110 34,110 L 54,110 Q 92,110 64,70 Z" fill="#a855f7"/>
+    <!-- Cute tail -->
+    <path d="M 12,105 Q -22,80 -18,65 Q -14,60 -12,70 Q -16,80 14,103 Z" fill="#00f7ff"/>
+
+    <!-- Paws/Feet -->
+    <ellipse cx="28" cy="110" rx="8" ry="4" fill="#00f7ff"/>
+    <ellipse cx="60" cy="110" rx="8" ry="4" fill="#00f7ff"/>
+  </g>
+
+  <!-- Position Coordinate pointer -->
+  <line x1="200" y1="180" x2="235" y2="210" stroke="#00f7ff" stroke-width="1" opacity="0.8"/>
+  <rect x="235" y="200" width="80" height="18" rx="4" fill="#132c32" stroke="#00f7ff" stroke-width="1"/>
+  <text x="242" y="212" font-family="'JetBrains Mono'" font-size="8" fill="#00f7ff" font-weight="700">COORD: [160, 65]</text>
+
+  <text x="15" y="235" class="nova-txt">> HOST: COM.EXE MOTION INITIALIZED</text>
+  <text x="345" y="235" class="nova-txt" fill="#00f7ff">EXP: 04</text>
+</svg>

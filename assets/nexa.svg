@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250" width="100%" height="100%" fill="none">
+  <defs>
+    <linearGradient id="nexa-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f7ff" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#a855f7" stop-opacity="0.8"/>
+    </linearGradient>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@700&amp;display=swap');
+      .nexa-txt { font-family: 'JetBrains Mono', monospace; font-weight: 700; font-size: 11px; fill: #64748b; }
+      @keyframes floatCard {
+        0%, 100% { transform: translateY(0px) rotate(-3deg); }
+        50% { transform: translateY(-8px) rotate(-1deg); }
+      }
+      .interactive-card {
+        transform-origin: center;
+        animation: floatCard 4s ease-in-out infinite;
+      }
+    </style>
+  </defs>
+
+  <!-- Border Frame -->
+  <rect width="400" height="250" rx="12" fill="#090515" stroke="#1f183c" stroke-width="1.5"/>
+
+  <!-- Background Geometry Grid -->
+  <circle cx="200" cy="125" r="90" stroke="#130d2d" stroke-dasharray="3,3" stroke-width="1"/>
+  <circle cx="200" cy="125" r="130" stroke="#160e35" stroke-dasharray="6,6" stroke-width="1"/>
+
+  <!-- Back Stacked Cards -->
+  <rect x="130" y="55" width="140" height="150" rx="10" fill="#0c0722" stroke="#1e1837" stroke-width="1.5" transform="rotate(4 200 130)" opacity="0.6"/>
+  <rect x="130" y="55" width="140" height="150" rx="10" fill="#0f092b" stroke="#3b2b73" stroke-width="1.5" transform="rotate(-6 200 130)" opacity="0.8"/>
+
+  <!-- Foreground Floating Card -->
+  <g class="interactive-card">
+    <rect x="130" y="50" width="140" height="150" rx="10" fill="#130a2f" stroke="url(#nexa-grad)" stroke-width="1.5"/>
+    
+    <!-- Card Content -->
+    <rect x="145" y="65" width="110" height="12" rx="4" fill="#a855f7" opacity="0.3"/>
+    <circle cx="153" cy="71" r="3" fill="#00f7ff" />
+    
+    <!-- Content Lines -->
+    <line x1="145" y1="95" x2="225" y2="95" stroke="#94a3b8" stroke-width="4" stroke-linecap="round"/>
+    <line x1="145" y1="110" x2="205" y2="110" stroke="#64748b" stroke-width="4" stroke-linecap="round"/>
+    <line x1="145" y1="125" x2="215" y2="125" stroke="#64748b" stroke-width="4" stroke-linecap="round"/>
+    
+    <!-- Sparkle/Gemini Icon -->
+    <path d="M 235,145 Q 240,145 240,140 Q 240,145 245,145 Q 240,145 240,150 Q 240,145 235,145 Z" fill="#00f7ff"/>
+    <rect x="145" y="160" width="75" height="25" rx="6" fill="#00f7ff" opacity="0.1"/>
+    <text x="153" y="176" font-family="'JetBrains Mono'" font-size="9" fill="#00f7ff" font-weight="700">AI FEED</text>
+  </g>
+
+  <!-- Navigation Signals -->
+  <path d="M 200,215 L 205,222 L 195,222 Z" fill="#a855f7"/>
+  <path d="M 200,35 L 205,28 L 195,28 Z" fill="#a855f7" opacity="0.5"/>
+
+  <text x="15" y="235" class="nexa-txt">> COMPONENT: KNOWLEDGE FEED FLUID</text>
+  <text x="345" y="235" class="nexa-txt" fill="#00f7ff">EXP: 02</text>
+</svg>
