@@ -1,93 +1,90 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 320" width="100%" height="100%" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 380" width="100%" height="100%" fill="none">
   <defs>
-    <!-- Fonts -->
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;700;800&amp;family=Outfit:wght@800&amp;display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@200;400;800&amp;family=JetBrains+Mono:wght@300;500;700&amp;display=swap');
       
-      .text-title {
+      .brand-title {
         font-family: 'Outfit', sans-serif;
         font-weight: 800;
-        font-size: 58px;
+        font-size: 64px;
         fill: #ffffff;
+        letter-spacing: 12px;
       }
       
-      .text-glow {
+      .brand-title-glow {
+        filter: url(#blur-gate);
+        opacity: 0.4;
+      }
+      
+      .meta-label {
+        font-family: 'JetBrains Mono', monospace;
+        font-weight: 500;
+        font-size: 11px;
+        fill: #64748b;
+        letter-spacing: 2px;
+      }
+      
+      .text-body {
+        font-family: 'Outfit', sans-serif;
+        font-weight: 200;
+        font-size: 18px;
+        fill: #94a3b8;
+        letter-spacing: 1px;
+      }
+
+      .text-highlight {
+        font-weight: 400;
+        fill: #00f7ff;
+      }
+
+      @keyframes floatArt {
+        0%, 100% { transform: translateY(0) rotate(0deg); }
+        50% { transform: translateY(-6px) rotate(1deg); }
+      }
+      
+      .art-group {
+        animation: floatArt 6s ease-in-out infinite;
+      }
+      
+      .art-line {
+        stroke: #a855f7;
+        stroke-width: 0.75;
+        opacity: 0.3;
+      }
+      
+      .art-line-active {
+        stroke: #00f7ff;
+        stroke-width: 1.5;
+        opacity: 0.85;
         filter: url(#glow-cyan);
       }
       
-      .text-mono {
-        font-family: 'JetBrains Mono', monospace;
-        font-weight: 400;
-        font-size: 14px;
-        fill: #94a3b8;
-      }
-      
-      .text-mono-bold {
-        font-family: 'JetBrains Mono', monospace;
-        font-weight: 700;
-        font-size: 14px;
-        fill: #00f7ff;
-      }
-      
-      .sub {
-        font-family: 'JetBrains Mono', monospace;
-        font-weight: 700;
-        font-size: 16px;
-        fill: #a855f7;
-        letter-spacing: 4px;
-      }
-      
-      /* Typing Animation Simulation via SVG */
-      @keyframes typing {
-        0%, 100% { content: "[ algorithms ]"; }
-        25% { content: "[ artificial intelligence ]"; }
-        50% { content: "[ full-stack systems ]"; }
-        75% { content: "[ interactive experiences ]"; }
-      }
-      
-      .animated-prompt::after {
-        display: inline-block;
-        content: "[ algorithms ]";
-        animation: typing 12s infinite;
-        color: #00f7ff;
-        font-weight: 700;
-      }
-
-      /* Grid pulses */
-      @keyframes pulse {
-        0%, 100% { opacity: 0.15; }
-        50% { opacity: 0.35; }
-      }
-      .grid-lines {
+      .art-node {
+        fill: #090515;
         stroke: #a855f7;
-        stroke-width: 0.5;
-        opacity: 0.2;
-        animation: pulse 4s infinite alternate;
+        stroke-width: 1.5;
       }
       
-      @keyframes scanner {
-        0% { transform: translateY(0); opacity: 0.7; }
-        50% { opacity: 0.1; }
-        100% { transform: translateY(300px); opacity: 0.7; }
-      }
-      .scan-line {
-        stroke: #00f7ff;
-        stroke-width: 1;
-        opacity: 0.4;
-        animation: scanner 6s infinite linear;
+      .art-node-active {
+        fill: #00f7ff;
+        stroke: #ffffff;
+        stroke-width: 2;
+        filter: url(#glow-cyan-node);
       }
     </style>
-
-    <!-- Glowing Filters -->
-    <filter id="glow-cyan" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="8" result="blur" />
+    
+    <filter id="blur-gate" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="12" />
+    </filter>
+    <filter id="glow-cyan" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="5" result="blur" />
       <feMerge>
         <feMergeNode in="blur"/>
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
-    <filter id="glow-purple" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="6" result="blur" />
+    <filter id="glow-cyan-node" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
       <feMerge>
         <feMergeNode in="blur"/>
         <feMergeNode in="SourceGraphic"/>
@@ -95,60 +92,69 @@
     </filter>
   </defs>
 
-  <!-- Dark Background Panel -->
-  <rect width="800" height="320" rx="16" fill="#090516" stroke="#1e1837" stroke-width="2"/>
+  <!-- Deep Dark Luxury Background Canvas -->
+  <rect width="800" height="380" rx="16" fill="#090514" stroke="#1f153a" stroke-width="2"/>
 
-  <!-- Matrix Background Grid Grid -->
-  <g class="grid-lines">
-    <path d="M 0,40 L 800,40 M 0,80 L 800,80 M 0,120 L 800,120 M 0,160 L 800,160 M 0,200 L 800,200 M 0,240 L 800,240 M 0,280 L 800,280" />
-    <path d="M 40,0 L 40,320 M 80,0 L 80,320 M 120,0 L 120,320 M 160,0 L 160,320 M 200,0 L 200,320 M 240,0 L 240,320 M 280,0 L 280,320 M 320,0 L 320,320 M 360,0 L 360,320 M 400,0 L 400,320 M 440,0 L 440,320 M 480,0 L 480,320 M 520,0 L 520,320 M 560,0 L 560,320 M 600,0 L 600,320 M 640,0 L 640,320 M 680,0 L 680,320 M 720,0 L 720,320 M 760,0 L 760,320" />
-  </g>
-
-  <!-- Horizontal Scanning Laser -->
-  <line x1="2" y1="10" x2="798" y2="10" class="scan-line" />
-
-  <!-- Terminal Header Frame Decoration -->
-  <path d="M 16,16 L 784,16" stroke="#1e1837" stroke-width="1"/>
-  <rect x="25" y="24" width="8" height="8" rx="4" fill="#ef4444" />
-  <rect x="40" y="24" width="8" height="8" rx="4" fill="#eab308" />
-  <rect x="55" y="24" width="8" height="8" rx="4" fill="#22c55e" />
-  <text x="80" y="32" class="text-mono" font-size="11" fill="#64748b">> SYSTEM: DWARKESH.RANA // CORE INITIALIZED</text>
-
-  <!-- Stats Indicators Right side -->
-  <rect x="680" y="24" width="95" height="18" rx="4" fill="#130d2d" stroke="#3b2b73" stroke-width="1"/>
-  <circle cx="692" cy="33" r="4" fill="#00f7ff" filter="url(#glow-cyan)"/>
-  <text x="705" y="37" class="text-mono" font-size="10" fill="#00f7ff" font-weight="700">BUILDING ACTIVE</text>
-
-  <!-- Tech Lines & Crosshairs -->
-  <path d="M 40,65 L 55,65 L 55,100" stroke="#00f7ff" stroke-width="1.5" opacity="0.8"/>
-  <path d="M 760,65 L 745,65 L 745,100" stroke="#a855f7" stroke-width="1.5" opacity="0.8"/>
-  <path d="M 40,280 L 55,280 L 55,245" stroke="#a855f7" stroke-width="1.5" opacity="0.8"/>
-  <path d="M 760,280 L 745,280 L 745,245" stroke="#00f7ff" stroke-width="1.5" opacity="0.8"/>
-
-  <!-- Main Hero Brand Typography -->
-  <g transform="translate(65, 80)">
-    <!-- Cyan Glow Behind Title -->
-    <text x="0" y="55" class="text-title text-glow" fill="#00f7ff" opacity="0.3">DWARKESH</text>
-    <text x="0" y="55" class="text-title">DWARKESH</text>
-    <text x="3" y="80" class="sub">IT ENGINEER &bull; BUILDER &bull; EXPERIMENTER</text>
-  </g>
-
-  <!-- Interactive Terminal Simulator Pane -->
-  <g transform="translate(70, 185)">
-    <!-- Terminal Box Border -->
-    <rect width="660" height="98" rx="8" fill="#0b081b" stroke="#3b2b73" stroke-width="1" opacity="0.9"/>
+  <!-- Left Side Interface Grid Details -->
+  <g transform="translate(45, 60)">
+    <!-- Metadata Identifiers -->
+    <text x="0" y="0" class="meta-label">SYS.DWARKESH // ACTIVE_PORT</text>
     
-    <!-- Code Lines -->
-    <text x="20" y="30" class="text-mono">> running_mode: <tspan fill="#ffffff">obsessed</tspan></text>
-    <text x="20" y="52" class="text-mono">> current_work: <tspan fill="#ffffff">turning complex concepts into digital assets</tspan></text>
+    <!-- Title and glowing base -->
+    <text x="-2" y="70" class="brand-title brand-title-glow" fill="#00f7ff">DWARKESH</text>
+    <text x="0" y="70" class="brand-title">DWARKESH</text>
     
-    <g transform="translate(20, 74)">
-      <text x="0" y="0" class="text-mono-bold">> status: </text>
-      <!-- ForeignObject for HTML animation simulation -->
-      <foreignObject x="72" y="-14" width="400" height="20">
-        <div xmlns="http://www.w3.org/1999/xhtml" class="text-mono-bold animated-prompt" style="font-family: 'JetBrains Mono', monospace; font-size: 14px; line-height: 1;"></div>
-      </foreignObject>
+    <!-- Role details -->
+    <text x="3" y="115" class="meta-label" fill="#a855f7">IT ENGINEER &bull; BUILDER &bull; EXPERIMENTER</text>
+    
+    <!-- Vision statement -->
+    <text x="3" y="180" class="text-body">
+      Building <tspan class="text-highlight">algorithms</tspan>, 
+      <tspan class="text-highlight">AI networks</tspan> &amp; 
+      <tspan class="text-highlight">digital interfaces</tspan>
+    </text>
+    <text x="3" y="210" class="text-body" font-size="15" fill="#64748b">
+      Creating tools that test boundaries and solve real-world problems.
+    </text>
+    
+    <!-- Status parameters -->
+    <g transform="translate(3, 255)">
+      <rect width="180" height="24" rx="4" fill="#130d2d" stroke="#2c1a4d" stroke-width="1"/>
+      <circle cx="15" cy="12" r="4" fill="#00f7ff" filter="url(#glow-cyan-node)"/>
+      <text x="28" y="16" class="meta-label" fill="#00f7ff">CURRENT STATE: BUILDING</text>
     </g>
   </g>
-  
+
+  <!-- Right Side Interactive Art Piece (Abstract Computational Network) -->
+  <g class="art-group" transform="translate(540, 190)">
+    <!-- Tech Rings -->
+    <circle cx="0" cy="0" r="140" stroke="#1c143c" stroke-width="1" stroke-dasharray="4,6" fill="none"/>
+    <circle cx="0" cy="0" r="90" stroke="#251242" stroke-width="0.5" fill="none"/>
+    <circle cx="0" cy="0" r="40" stroke="#00f7ff" stroke-width="0.5" stroke-dasharray="2,4" opacity="0.4" fill="none"/>
+    
+    <!-- Connection Paths -->
+    <!-- Dijkstra optimal resolve path -->
+    <path d="M -110,-40 H -60 L -10,40 L 60,-30 L 110,-30" class="art-line-active" fill="none"/>
+    
+    <!-- Surrounding structural lines -->
+    <path d="M -110,-40 L -90,60 L -10,40 L 70,80 L 110,-30" class="art-line" fill="none"/>
+    <path d="M -60,-80 L -10,40 L 40,-90 L 60,-30 L 10,120" class="art-line" fill="none"/>
+    <path d="M -90,60 L 10,120 L 70,80" class="art-line" fill="none"/>
+    <path d="M -60,-80 L 60,-30" class="art-line" fill="none"/>
+    
+    <!-- Graph Nodes -->
+    <circle cx="-110" cy="-40" r="4" class="art-node-active"/>
+    <circle cx="-60" cy="-80" r="4" class="art-node"/>
+    <circle cx="-60" cy="75" r="4.5" class="art-node"/>
+    <circle cx="-90" cy="60" r="3.5" class="art-node"/>
+    <circle cx="-10" cy="40" r="4.5" class="art-node-active"/>
+    <circle cx="40" cy="-90" r="3.5" class="art-node"/>
+    <circle cx="60" cy="-30" r="4" class="art-node-active"/>
+    <circle cx="70" cy="80" r="4.5" class="art-node"/>
+    <circle cx="10" cy="120" r="4.5" class="art-node"/>
+    <circle cx="110" cy="-30" r="5" class="art-node-active"/>
+
+    <!-- Concentric glow overlays on active node endpoints -->
+    <circle cx="110" cy="-30" r="10" stroke="#00f7ff" stroke-width="0.5" fill="none" opacity="0.5"/>
+  </g>
 </svg>
