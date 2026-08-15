@@ -1,0 +1,12 @@
+# Local portfolio files and dependencies
+node_modules/
+dist/
+public/
+index.html
+style.css
+app.js
+package.json
+package-lock.json
+git_status.txt
+git_status_utf8.txt
+sizes.txt
