@@ -1,5 +1,5 @@
 <p align="center">
-<img src="assets/hero.svg" width="100%" alt="DWARKESH // PERSONAL OPERATING INTERFACE" />
+<img src="https://raw.githubusercontent.com/dwarkesh-rana/dwarkesh.rana/main/assets/hero.svg" width="100%" alt="DWARKESH // PERSONAL OPERATING INTERFACE" />
 </p>
 
 ## 👤 PERSONAL IDENTITY
@@ -17,7 +17,7 @@ I am an IT Engineering student building complex, experimental, and interactive s
 <tr valign="top">
 <td width="50%">
 <p align="center">
-<img src="assets/pathlab.svg" width="100%" alt="01 / PATHLAB" />
+<img src="https://raw.githubusercontent.com/dwarkesh-rana/dwarkesh.rana/main/assets/pathlab.svg" width="100%" alt="01 / PATHLAB" />
 </p>
 <h3 align="center">01 // PATHLAB</h3>
 <p align="center"><i>"Algorithms meet the real world."</i></p>
@@ -28,7 +28,7 @@ I am an IT Engineering student building complex, experimental, and interactive s
 </td>
 <td width="50%">
 <p align="center">
-<img src="assets/nexa.svg" width="100%" alt="02 / NEXA" />
+<img src="https://raw.githubusercontent.com/dwarkesh-rana/dwarkesh.rana/main/assets/nexa.svg" width="100%" alt="02 / NEXA" />
 </p>
 <h3 align="center">02 // NEXA</h3>
 <p align="center"><i>"Learning without the boring part."</i></p>
@@ -41,7 +41,7 @@ I am an IT Engineering student building complex, experimental, and interactive s
 <tr valign="top">
 <td width="50%">
 <p align="center">
-<img src="assets/spendly.svg" width="100%" alt="03 / SPENDLY" />
+<img src="https://raw.githubusercontent.com/dwarkesh-rana/dwarkesh.rana/main/assets/spendly.svg" width="100%" alt="03 / SPENDLY" />
 </p>
 <h3 align="center">03 // SPENDLY</h3>
 <p align="center"><i>"Your money. Simplified."</i></p>
@@ -52,7 +52,7 @@ I am an IT Engineering student building complex, experimental, and interactive s
 </td>
 <td width="50%">
 <p align="center">
-<img src="assets/nova.svg" width="100%" alt="04 / NOVA ENGINE" />
+<img src="https://raw.githubusercontent.com/dwarkesh-rana/dwarkesh.rana/main/assets/nova.svg" width="100%" alt="04 / NOVA ENGINE" />
 </p>
 <h3 align="center">04 // NOVA ENGINE</h3>
 <p align="center"><i>"A computer companion."</i></p>
