@@ -155,12 +155,12 @@ An experimental desktop pet / AI companion combining a native Rust backend with 
 # 📈 GITHUB METRICS
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=dwarkesh-rana&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" height="180" alt="GitHub Stats" />
+  <img src="https://github-stats-extended.vercel.app/api?username=dwarkesh-rana&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" height="180" alt="GitHub Stats" />
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=dwarkesh-rana&theme=tokyonight&hide_border=true" height="180" alt="GitHub Streak" />
 </p>
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=dwarkesh-rana&layout=compact&theme=tokyonight&hide_border=true&langs_count=8" alt="Top Langs" />
+  <img src="https://github-stats-extended.vercel.app/api/top-langs/?username=dwarkesh-rana&layout=compact&theme=tokyonight&hide_border=true&langs_count=8" alt="Top Langs" />
 </p>
 
 ---
